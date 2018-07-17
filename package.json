@@ -4,11 +4,13 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": "concurrently \"npm run serve-api\" \"npm run serve\"",
+    "serve": "ng serve --port 3333 --proxy-config proxy.config.json",
+    "serve-api": "nodemon server.js --watch server"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +23,11 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.0",
     "core-js": "^2.4.1",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.1",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
