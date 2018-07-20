@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* we can import css from node modules here if not added to .angular-cli.json */
+/* @import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; */
+/* @import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css'; */
+
 .active {
-    background: #ddd;
-    padding: 5px;
+    background: #5a5a5a;
+    border-radius: 3px;
+}
+
+.container-fluid {
+    display: inline-block;
 }
