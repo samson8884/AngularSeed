@@ -1,20 +1,16 @@
 <div>
 
-    <form (ngSubmit)="login()">
+    <form>
   
       <div>
-  
-        <input type="email" placeholder="Email" name="email" />
-  
+        <input type="email" placeholder="Email" name="email" [(ngModel)]="emailTxt"/>
       </div>
   
       <div>
-  
-        <input type="password" placeholder="Password" name="password" />
-  
+        <input type="password" placeholder="Password" name="password" [(ngModel)]="passwordTxt"/>
       </div>
   
-      <button type="submit">Login</button>
+      <button type="submit" (click)="login()">Login</button>
   
     </form>
   

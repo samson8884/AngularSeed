@@ -12,7 +12,7 @@ export class AuthService {
     localStorage.setItem("LoggedInUser", token)
   }
 
-  getToken() {
+  getToken() {    
     return localStorage.getItem("LoggedInUser")
   }
 
