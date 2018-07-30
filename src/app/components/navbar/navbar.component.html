@@ -1,17 +1,21 @@
 <!-- for Angular Router -->
 <nav class="navbar navbar-expand-sm bg-dark" *ngIf="isUserLoggedIn()">
-        
+  <div class="container-fluid">      
     <ul class="navbar-nav">
         <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" routerLink="home" placement="bottom" ngbTooltip="Take me home">
+          <a class="nav-link" routerLink="home" placement="bottom" ngbTooltip="Take me home">
             <i class="fas fa-home"></i> Home</a>
         </li>
         <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" routerLink="about" placement="bottom" ngbTooltip="Take me to about page">
+          <a class="nav-link" routerLink="about" placement="bottom" ngbTooltip="Take me to about page">
             <i class="fas fa-info-circle"></i> About</a>
-        </li>
+        </li>        
     </ul>
 
+    <div class="float-right">
+      <button class="btn btn-success navbar-btn" (click)="logout()">Logout</button>
+    </div>
+  </div>
 </nav>
 
 
