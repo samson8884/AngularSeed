@@ -1,3 +1,38 @@
+/* For angular Router 
+*
+*/
+
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+
+
+const routes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: '**', 
+    redirectTo: 'home'
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+/* For UI Router 
+*
+*/
+/*
 import { NgModule } from '@angular/core';
 import { RootModule, UIRouterModule } from '@uirouter/angular';
 import { HomeComponent } from './components/home/home.component';
@@ -24,3 +59,4 @@ const rootModule: RootModule = {
   exports: [UIRouterModule]
 })
 export class AppRoutingModule { }
+*/
