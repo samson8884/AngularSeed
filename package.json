@@ -26,6 +26,7 @@
     "@fortawesome/fontawesome-free": "^5.1.1",
     "@ng-bootstrap/ng-bootstrap": "^1.1.2",
     "@uirouter/angular": "^1.1.0",
+    "animate.css": "^3.7.0",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.0.0",
     "concurrently": "^3.6.0",

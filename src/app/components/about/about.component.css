@@ -1,0 +1,39 @@
+.about-page.panel-center {
+    margin-top: 50px;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tech-list-item {
+    display: flex;
+}
+
+.express-js-txt {
+    background-color: #F7DF1E;
+    font-weight: bold;
+    padding-left: 10px;
+    color: black;
+    line-height: 50px;
+    margin-left: 5px;
+}
+
+.tech-list .center-align{
+    margin: auto;
+}
+
+.tech-list-item {
+    margin-bottom: 30px;
+}
+
+.tech-text{
+    font-size: 40px;
+    color: black;
+    line-height: 45px;
+}
+
+.heading-margin-bottom {
+    margin-bottom: 20px;
+}

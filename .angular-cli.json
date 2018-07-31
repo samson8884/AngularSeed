@@ -18,11 +18,11 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": [        
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "styles": [
         "../node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+        "../node_modules/animate.css/animate.min.css",
         "styles.css",
-        "theme.css"  
+        "theme.scss"  
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
