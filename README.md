@@ -54,7 +54,7 @@ https://stackoverflow.com/questions/42895585/hooking-up-express-js-with-angular-
 The proper way is to run Angular and Express as two different apps on two different ports. Angular will be served on port 4200 and Express on port 3000 as usual.
 
 4. Then configure a proxy for API calls to Express app. create proxy.config.json in app root
-
+`
 {
 	"/api/*":{
 	  "target":"http://localhost:3000",
@@ -62,6 +62,7 @@ The proper way is to run Angular and Express as two different apps on two differ
 	  "logLevel":"debug"
 	}
 }
+`
 
 5. run the node js server
 node will be available at localhost:3000
