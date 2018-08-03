@@ -29,6 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Steps to create an Angular app
+For your reference, all the steps executed to create this project have been documented below.
 
 1. Install angular cli
 `npm install -g @angular/cli`
