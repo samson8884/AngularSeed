@@ -64,30 +64,33 @@ The proper way is to run Angular and Express as two different apps on two differ
 }
 ```
 
-5. run the node js server
+5. run the node js server `node server.js`
 node will be available at localhost:3000
 
 6. run the angular UI
-ng serve -> UI will be available at localhost:4200
+`ng serve` -> UI will be available at localhost:4200
 OR
-npm start -> UI will be available at  localhost:4200
+`npm start` -> UI will be available at  localhost:4200
 Depending on what start script does, npm start builds the angular app too. Check package.json.. it runs ng serve which would build the angular app
+```
 	"scripts": { "start": "ng serve"}
-	
+```	
 	
 	
 ## Using concurrently to start and monitor both node as well as angular
 https://stackoverflow.com/questions/42895585/hooking-up-express-js-with-angular-cli-in-dev-environment
 
-1. npm install concurrently --save 
-   npm install nodemon --save
+1. `npm install concurrently --save` 
+   `npm install nodemon --save`
 
 2. in package.json
+```
 "start": "concurrently \"npm run serve-api\" \"npm run serve\"",
 "serve": "ng serve --port 3333 --proxy-config proxy.config.json", // You could add --port for changing port
 "serve-api": "nodemon [YOUR_EXPRESS_APP.js] --watch server",
+```
 
-3. npm start is enough for running the project.
+3. `npm start` is enough for running the project.
 
 
 
@@ -96,25 +99,30 @@ https://stackoverflow.com/questions/42895585/hooking-up-express-js-with-angular-
 D:\SamplePrj\Angular\myapp>ng generate service services\api\api
 
 2. in api.service.ts
+```
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+```
 
 3. in app.module.ts
+```
 import { HttpClientModule } from '@angular/common/http';
 
 imports: [
     BrowserModule,
     HttpClientModule
   ]
-  
+ ```
+
   
 
 ## CORS 
 CORS handling should not be needed since Angular UI and Node Proxy server are running from the same host. If the Angular UI makes API requests directly, we need to handle CORS on the server side. If the server is a NodeJS server, here are the steps to handle CORS
 
-1. npm install cors --save
+1. `npm install cors --save`
 
 2. in server.js
+```
 const cors = require('cors')
 
 var corsOptions = {
@@ -123,6 +131,7 @@ var corsOptions = {
 }
 var app = express();
 app.use(cors(corsOptions)); //corsOptions is optional
+```
 
 
 
@@ -130,7 +139,7 @@ app.use(cors(corsOptions)); //corsOptions is optional
 I) Usually we just need to start the UI on https
 https://brianflove.com/2016/10/22/angular-cli-using-https/
 1. run the UI server using
-ng serve --ssl 
+`ng serve --ssl`
 you can pass the certificate & pvt key in the above command, but by default angular cli will generate its own certificate & pvt key
 
 if you are using concurrently as descirbed above, you will need to update package.json's serve script
@@ -144,6 +153,7 @@ https://blog.didierstevens.com/2008/12/30/howto-make-your-own-cert-with-openssl/
 2. store app.key and app.cert at approot/keys (i.e. myapp/keys... server.js is located in myapp)
 
 3. in server.js
+```
 var   fs = require("fs"),
       https = require("https");
 
@@ -152,8 +162,9 @@ var certificate = fs.readFileSync('./keys/app.cert', 'utf8');
 var credentials = {key: privateKey, cert: certificate};	  
 var httpsServer = https.createServer(credentials, app);
 httpsServer.listen(8443, () => console.log(`HTTPS API running on localhost:${8443}`));
+```
 
-4. ng build
+4. `ng build`
 need this step to generate the dist folder and corresponding files
 
 5. access the app at https://localhost:8443	 
@@ -161,28 +172,34 @@ need this step to generate the dist folder and corresponding files
 
 
 ## Fontawesome
-1. npm install @fortawesome/fontawesome-free --save
+1. `npm install @fortawesome/fontawesome-free --save`
 
 2. add the reference to fontawesomein .angular-cli.json
+```
 "styles": [        
         "../node_modules/@fortawesome/fontawesome-free/css/all.min.css",
 		"styles.css"
       ]
+```
 
 
 ## Bootstrap
-1. npm install bootstrap@4.0.0 --save
+1. `npm install bootstrap@4.0.0 --save`
 this version worked with angular 5
 
 2. add the reference to bootstrap.css in .angular-cli.json
+```
 "styles": [        
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/@fortawesome/fontawesome-free/css/all.min.css",
 		"styles.css"
       ]
+```
 	  
 we could also import it in styles.css since this is already included in .angular-cli.json
+```
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+```
 
 to add the javascript component ir ngb module, use NgbModule bootstrap NOT bootstrap.min.js since this needs jQuery.
 https://www.c-sharpcorner.com/article/getting-started-with-ng-bootstrap-in-angular-5-app/
@@ -198,6 +215,7 @@ https://coursetro.com/posts/code/111/Using-the-Angular-5-Router-%28Tutorial%29
 1. create app-routing.module.ts in /src/app
 
 2. add content
+```
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -224,33 +242,37 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+```
 
 3. in app.component.html add nav links and router outlet
-
+```
 <ul>
   <li [routerLinkActive]="['active']"><a routerLink="home">Home</a></li>
   <li [routerLinkActive]="['active']"><a routerLink="about">About</a></li>
 </ul>
 
 <router-outlet></router-outlet>
+```
 
 
 
 ## Authentication With Route Guards
 https://dzone.com/articles/implementing-guard-in-angular-5-app
 
-1. ng generate guard authentication/auth
+1. `ng generate guard authentication/auth`
 
-2. c:\myapp\src\app\components>ng generate component login
+2. c:\myapp\src\app\components>`ng generate component login`
 
 3. in app-routing.module.ts 
 add route for login
 add canActivate for other routes
+```
 {
     path: 'home',
     component: HomeComponent,
     canActivate: [AuthGuard] 
 }
+```
   
 4. D:\SamplePrj\Angular\AngularSeed\myapp>ng generate service authentication\auth 
 Do not forget to add AuthService and AuthGuard as providers in app.module.ts.
@@ -262,11 +284,12 @@ Do not forget to add AuthService and AuthGuard as providers in app.module.ts.
 ## Adding UI router
 docs: https://ui-router.github.io/ng2/docs/1.1.0/modules/transition.html
 
-1. npm install @uirouter/angular --save
+1. `npm install @uirouter/angular --save`
 
 2. create app-routing.module.ts in /src/app
 
 3. add content
+```
 import { NgModule } from '@angular/core';
 import { RootModule, UIRouterModule } from '@uirouter/angular';
 
@@ -285,18 +308,22 @@ const rootModule: RootModule = {
   exports: [UIRouterModule]
 })
 export class AppRoutingModule { }
-
+```
 
 4. Next step is to modify the app.component.html in /src/app, change:
-
+```
 <router-outlet></router-outlet>
+```
 
 into:
-
+```
 <ui-view></ui-view>
+```
 
 5. in app.module.ts
+```
 import { AppRoutingModule } from './app-routing.module';
+```
 
 and add AppRoutingModule to imports array
 
@@ -309,7 +336,9 @@ c:\myapp\src\app\components>ng generate component home
 Note: If you find issues with ui router, the version of ui router may not be compatible with your angular version. For example "@uirouter/angular": "^2.0.0", did not work with "@angular/core": "^5.2.0". I had to downgrade to "@uirouter/angular": "^1.1.0"
 
 ## useful npm commands
+```
 1. npm view @uirouter/angular versions (this lists all versions of ui router)
 2. npm uninstall --save @uirouter/angular
 3. npm install --save @uirouter/angular@^1.1.0
+```
 
