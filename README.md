@@ -31,11 +31,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Steps to create an Angular app
 
 1. Install angular cli
-npm install -g @angular/cli
+`npm install -g @angular/cli`
 
-2. ng new myapp
+2. `ng new myapp`
 
-3. ng serve
+3. `ng serve`
 
 4. index.html -> main.ts -> app.module.ts -> app.component.ts -> app.component.html
 
@@ -44,7 +44,7 @@ npm install -g @angular/cli
 ## Adding Express
 https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
 
-1. npm install --save express body-parser
+1. `npm install --save express body-parser`
 
 2. create server.js
 
@@ -54,7 +54,7 @@ https://stackoverflow.com/questions/42895585/hooking-up-express-js-with-angular-
 The proper way is to run Angular and Express as two different apps on two different ports. Angular will be served on port 4200 and Express on port 3000 as usual.
 
 4. Then configure a proxy for API calls to Express app. create proxy.config.json in app root
-`
+```
 {
 	"/api/*":{
 	  "target":"http://localhost:3000",
@@ -62,7 +62,7 @@ The proper way is to run Angular and Express as two different apps on two differ
 	  "logLevel":"debug"
 	}
 }
-`
+```
 
 5. run the node js server
 node will be available at localhost:3000
