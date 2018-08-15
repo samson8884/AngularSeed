@@ -4,16 +4,6 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 
-/**
- * Create HTTPS server.
- */
-/*
-var fs = require("fs"), https = require("https");
-var privateKey  = fs.readFileSync('./keys/app.key', 'utf8');
-var certificate = fs.readFileSync('./keys/app.cert', 'utf8');
-var credentials = {key: privateKey, cert: certificate};
-*/
-
 // Get our API routes
 const api = require('./server/routes/api');
 
@@ -43,16 +33,20 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
-const server = http.createServer(app);
 
-/**
- * Listen on provided port, on all network interfaces.
- */
+const server = http.createServer(app);
 server.listen(port, () => console.log(`API running on localhost:${port}`));
+
 
 /**
  * Create HTTPS server.
  */
-/*var httpsServer = https.createServer(credentials, app);
+/*
+var fs = require("fs"), https = require("https");
+var privateKey  = fs.readFileSync('./keys/app.key', 'utf8');
+var certificate = fs.readFileSync('./keys/app.cert', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
+
+var httpsServer = https.createServer(credentials, app);
 httpsServer.listen(8443, () => console.log(`HTTPS API running on localhost:${8443}`));
 */
