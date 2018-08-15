@@ -169,6 +169,7 @@ httpsServer.listen(8443, () => console.log(`HTTPS API running on localhost:${844
 need this step to generate the dist folder and corresponding files
 
 5. access the app at https://localhost:8443	
+
 Note: If you are using a proxy for Express as described in the Express section above, you will need to update proxy.config.json
 ```
 "target":"https://localhost:8443"
@@ -176,7 +177,7 @@ Note: If you are using a proxy for Express as described in the Express section a
 
 
 
-## Fontawesome
+## Font Awesome
 1. `npm install @fortawesome/fontawesome-free --save`
 
 2. add the reference to fontawesomein .angular-cli.json
