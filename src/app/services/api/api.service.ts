@@ -10,7 +10,6 @@ export class ApiService {
   ) { }
 
   public getSampleData() : Observable<any> {  
-    console.log("in getSampleData"); 
     var results = this.http.get('/api/getdata');
     
 	/* Uncomment this to use mock data */
