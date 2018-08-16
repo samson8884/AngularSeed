@@ -12,7 +12,11 @@ export class ApiService {
   public getSampleData() : Observable<any> {  
     console.log("in getSampleData"); 
     var results = this.http.get('/api/getdata');
+    
+	/* Uncomment this to use mock data */
     //var results = this.http.get('/assets/mockdata/sampledata.json');
+    
+    /* Uncomment this to use mock data from remote server. You may need to use CORS handling */
     //var results = this.http.get('https://jsonplaceholder.typicode.com/posts/1');
     return results;
   }
