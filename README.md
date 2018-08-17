@@ -78,6 +78,11 @@ Depending on what start script does, npm start builds the angular app too. Check
 ```	
 	
 	
+## Using mock data
+In cases where the API is not yet ready, we can use mock JSON data or sample JSON. Modify src/app/services/api.service.ts and comment out the code which gets data from the actual backend API. Uncomment the code to read the data from a local JSON file instead. Make sure you update the data in /assets/mockdata/sampledata.json.
+
+
+
 ## Using concurrently to start and monitor both node as well as angular
 https://stackoverflow.com/questions/42895585/hooking-up-express-js-with-angular-cli-in-dev-environment
 
