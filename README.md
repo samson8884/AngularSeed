@@ -341,6 +341,12 @@ c:\AngularSeedApp\src\app\components>ng generate component home
 
 Note: If you find issues with ui router, the version of ui router may not be compatible with your angular version. For example "@uirouter/angular": "^2.0.0", did not work with "@angular/core": "^5.2.0". I had to downgrade to "@uirouter/angular": "^1.1.0"
 
+
+## Themes
+In order to customize the colours and look of the app, you can edit theme.scss. You could also replace this file with you own theme file. Remeber to add the theme css/scss file at the end of the styles in .angular-cli.json
+
+
+
 ## useful npm commands
 ```
 1. npm view @uirouter/angular versions (this lists all versions of ui router)
