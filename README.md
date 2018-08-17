@@ -2,9 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
-## Development server
+## Running the app
 
-Run `ng start` for a dev server. Navigate to `http://localhost:3333/`. The app will automatically reload if you change any of the source files.
+1. Run `npm install` to install all dependencies. This is a one time install.
+
+2. Run `npm start` for a dev server. This starts the UI and Express API server (proxy server). Navigate to `http://localhost:3333/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -29,7 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Steps to create an Angular app
-For your reference, all the steps executed to create this project have been documented below.
+For your reference, all the steps executed to create this project have been documented below. These steps are only for reference and you do not need to perform any of these in order to run the app. If you want to run the app please refer to "Running the app" above.
 
 1. Install angular cli
 `npm install -g @angular/cli`
