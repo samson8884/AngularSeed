@@ -1,4 +1,4 @@
-# Myapp
+# AngularSeedApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
@@ -34,7 +34,7 @@ For your reference, all the steps executed to create this project have been docu
 1. Install angular cli
 `npm install -g @angular/cli`
 
-2. `ng new myapp`
+2. `ng new AngularSeedApp`
 
 3. `ng serve`
 
@@ -97,7 +97,7 @@ https://stackoverflow.com/questions/42895585/hooking-up-express-js-with-angular-
 
 ## Creating service to retrieve data
 1. from root of the app
-D:\SamplePrj\Angular\myapp>ng generate service services\api\api
+D:\SamplePrj\Angular\AngularSeedApp>ng generate service services\api\api
 
 2. in api.service.ts
 ```
@@ -151,7 +151,7 @@ II) If we also want the node backend to start on https
 https://blog.didierstevens.com/2008/12/30/howto-make-your-own-cert-with-openssl/
 1. Generate SSL certificates using http://www.selfsignedcertificate.com/
 
-2. store app.key and app.cert at approot/keys (i.e. myapp/keys... server.js is located in myapp)
+2. store app.key and app.cert at approot/keys (i.e. AngularSeedApp/keys... server.js is located in AngularSeedApp)
 
 3. in server.js
 ```
@@ -209,7 +209,7 @@ we could also import it in styles.css since this is already included in .angular
 
 to add the javascript component ir ngb module, use NgbModule bootstrap NOT bootstrap.min.js since this needs jQuery.
 https://www.c-sharpcorner.com/article/getting-started-with-ng-bootstrap-in-angular-5-app/
-D:\SamplePrj\Angular\AngularSeed\myapp>npm install --save @ng-bootstrap/ng-bootstrap@1.1.2	
+D:\SamplePrj\Angular\AngularSeed\AngularSeedApp>npm install --save @ng-bootstrap/ng-bootstrap@1.1.2	
 
 for widgets refer to
 https://ng-bootstrap.github.io/#/components/tooltip/examples 
@@ -267,7 +267,7 @@ https://dzone.com/articles/implementing-guard-in-angular-5-app
 
 1. `ng generate guard authentication/auth`
 
-2. c:\myapp\src\app\components>`ng generate component login`
+2. c:\AngularSeedApp\src\app\components>`ng generate component login`
 
 3. in app-routing.module.ts 
 add route for login
@@ -280,7 +280,7 @@ add canActivate for other routes
 }
 ```
   
-4. D:\SamplePrj\Angular\AngularSeed\myapp>ng generate service authentication\auth 
+4. D:\SamplePrj\Angular\AngularSeed\AngularSeedApp>ng generate service authentication\auth 
 Do not forget to add AuthService and AuthGuard as providers in app.module.ts.
 
 5. use `ngNativeValidate` directive on the login form in order to support HTML5 validations
@@ -334,7 +334,7 @@ import { AppRoutingModule } from './app-routing.module';
 and add AppRoutingModule to imports array
 
 6. create components
-c:\myapp\src\app\components>ng generate component home
+c:\AngularSeedApp\src\app\components>ng generate component home
 
 7. access that app at http://localhost:3333/home. If useHash is true, the URL will be http://localhost:3333/#/home
 
