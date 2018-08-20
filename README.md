@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 2. Run `npm start` for a dev server. This starts the UI and Express API server (proxy server). Navigate to `http://localhost:3333/`. The app will automatically reload if you change any of the source files.
 
-3. Login using any string that looks like a valid email id and any string as password. The UI side validation only checks if email and password are non empty and that the email looks like a valid email id. You will need to impliment backend authentication as per business needs for your project.
+3. Login using any string that looks like a valid email id and any string as password. The UI side validation only checks if email and password are non empty and that the email looks like a valid email id. You will need to implement backend authentication as per business needs for your project.
 
 4. After login you should be able to access the home page and the about page.
 
