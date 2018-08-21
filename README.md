@@ -12,6 +12,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 4. After login you should be able to access the home page and the about page.
 
+5. Now you can start modifying the home page and about page according to your needs. These pages have been added as placeholders and you are free to modify/delete them.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
