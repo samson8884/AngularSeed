@@ -82,12 +82,12 @@ The proper way is to run Angular and Express as two different apps on two differ
 node will be available at localhost:3000
 
 6. run the angular UI
-`ng serve` -> UI will be available at localhost:4200
+`ng serve --proxy-config proxy.config.json` -> UI will be available at localhost:4200
 OR
 `npm start` -> UI will be available at  localhost:4200
 Depending on what start script does, npm start builds the angular app too. Check package.json.. it runs ng serve which would build the angular app
 ```
-	"scripts": { "start": "ng serve"}
+	"scripts": { "start": "ng serve --proxy-config proxy.config.json"}
 ```	
 	
 	
