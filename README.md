@@ -3,6 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Running the app
+Note: We need angular cli version 1.7.4 to run this app. You can install angular cli globally using
+`npm install -g @angular/cli@1.7.4`
+or locally using
+`npm install --save @angular/cli@1.7.4`
+
 
 1. Run `npm install` to install all dependencies. This is a one time install.
 
