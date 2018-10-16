@@ -285,7 +285,7 @@ https://dzone.com/articles/implementing-guard-in-angular-5-app
 
 1. `ng generate guard authentication/auth`
 
-2. c:\AngularSeedApp\src\app\components>`ng generate component login`
+2. D:\SamplePrj\Angular\AngularSeedApp>ng generate component components\login
 
 3. in app-routing.module.ts 
 add route for login
@@ -352,7 +352,7 @@ import { AppRoutingModule } from './app-routing.module';
 and add AppRoutingModule to imports array
 
 6. create components
-c:\AngularSeedApp\src\app\components>ng generate component home
+D:\SamplePrj\Angular\AngularSeedApp>ng generate component components\home
 
 7. access that app at http://localhost:3333/home. If useHash is true, the URL will be http://localhost:3333/#/home
 
