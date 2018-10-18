@@ -33,7 +33,9 @@
     "core-js": "^2.4.1",
     "express": "^4.16.3",
     "nodemon": "^1.18.1",
+    "request-promise": "^4.2.2",
     "rxjs": "^6.3.2",
+    "underscore": "^1.9.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

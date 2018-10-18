@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../authentication/auth.service';
+import {_} from "underscore";
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    this.username = this.authService.getToken().split("@")[0];
+    this.username = this.authService.getToken().split("@")[0];      
   }
 
 }
