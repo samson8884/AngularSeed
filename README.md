@@ -125,7 +125,8 @@ import { Observable } from 'rxjs';
 
 3. in app.module.ts
 ```
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from 'ngx-http-client';
+Note: Do not import HttpClientModule from @angular/common/http if you need to pass special characters as query params
 
 imports: [
     BrowserModule,
