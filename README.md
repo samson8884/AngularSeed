@@ -87,8 +87,10 @@ OR
 `npm start` -> UI will be available at  localhost:4200
 Depending on what start script does, npm start builds the angular app too. Check package.json.. it runs ng serve which would build the angular app
 ```
-	"scripts": { "start": "ng serve --proxy-config proxy.config.json"}
+	"scripts": { "start": "ng serve  --host 0.0.0.0 --disableHostCheck true --proxy-config proxy.config.json"}
 ```	
+--host is passed in order to access the app on remote machines (other than localhost)
+--disableHostCheck is passed in order to resolve invalid host header issues 
 	
 	
 ## Using mock data

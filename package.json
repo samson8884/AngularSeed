@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start": "concurrently \"npm run serve-api\" \"npm run serve\"",
-    "serve": "ng serve --port 3333 --proxy-config proxy.config.json",
+    "serve": "ng serve --port 3333 --host 0.0.0.0 --disableHostCheck true --proxy-config proxy.config.json",
     "serve-api": "nodemon server.js --watch server"
   },
   "private": true,
