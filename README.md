@@ -1,5 +1,5 @@
 # AngularSeedApp
-Angular skeleton application designed to quick start your webapp. Developers can concentrate on building business specific requirements and forget the overheads, thus considerably reducing efforts. It comes fully integrated with Angular, Express, Concurrently, Bootstrap, Font Awesome and some animations.
+Angular skeleton application designed to quick start your webapp. Developers can concentrate on building business specific requirements and forget the overheads, thus considerably reducing time and efforts. It comes fully integrated with Angular, Express, Concurrently, Bootstrap, Font Awesome and some animations.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
