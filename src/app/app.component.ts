@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from './services/api/api.service';
+import { NotificationMessageService } from './services/notification-message/notification-message.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,9 @@ import { ApiService } from './services/api/api.service';
 })
 export class AppComponent {
   title = 'app';
+  notificationMessageSubscriber;
 
-  constructor(private ApiService: ApiService) {
+  constructor(private ApiService: ApiService, private NotificationMessageService: NotificationMessageService) {
     this.initApp();
   }
 
@@ -20,9 +22,19 @@ export class AppComponent {
         console.log(data);
       },
       err => {
-        console.log('error')
-        console.error(err)
+        this.displayError(err);
       }
     );
+  }
+
+  ngOnDestroy() {
+    this.notificationMessageSubscriber && this.notificationMessageSubscriber.unsubscribe();
+  }
+    
+  displayError(err) {
+    this.notificationMessageSubscriber = this.NotificationMessageService.changeMessage({
+      message : 'Could not fetch data', type : 'error'});
+      console.log('error in getSampleData');
+      console.log(err);    
   }
 }

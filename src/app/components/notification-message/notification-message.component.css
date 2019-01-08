@@ -1,0 +1,31 @@
+.notification-message-modal {
+    width: calc(100vw);
+    height: calc(100vh);
+    position: absolute;
+    background: #999;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.notification-message-container {
+    text-align: center;
+    /* background: white; */
+    position: absolute;
+    z-index: 2;
+    padding: 20px 40px;
+    width: 40%;
+    margin: auto;
+    left: 50%;
+    margin-left: -250px;
+    top: 50%;
+    margin-top: -32px;
+}
+
+.close-btn {
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    z-index: 3;
+    cursor: pointer;
+    color: black;
+}
