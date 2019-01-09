@@ -10,6 +10,8 @@ export class NotificationMessageComponent implements OnInit {
 
   notificationMessage: string;
   showNotification: boolean;
+    
+  /* Possible values are INFO, WARNING, SUCCESS and ERROR */
   alertType: string;
 
   constructor(private NotificationMessageService: NotificationMessageService) { }

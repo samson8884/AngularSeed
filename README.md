@@ -40,9 +40,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 This section explains how to use common components
 
 1) NotificationMessageService and NotificationMessageComponent
-This service/component can be used to display error messages in a modal. For example, you could use this to display error messages when a backend API call fails.
+This service and corresponding component can be used to display messages in a modal. For example, you could use this to display error messages when a backend API call fails.
 Check the displayError() method in app.component.ts for details.
-Note: NotificationMessageComponent currently supports error type messages. We can extend it further to display warning/general messages by changing the styling appropriately.
+Note: NotificationMessageComponent supports WARNING, INFO, SUCCESS and ERROR type messages.
 
 ## Further help
 

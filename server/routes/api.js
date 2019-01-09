@@ -32,7 +32,7 @@ router.get('/getdata', (req, res) => {
             // Deal with the error
             console.log("error in /getdata")
             console.log(err)            
-            res.status(500);
+            res.status(err.statusCode);
             var errorMsg = err.message ? err.message : 'error getting getdata';
             return res.send(errorMsg);
         });

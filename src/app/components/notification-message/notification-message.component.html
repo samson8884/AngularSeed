@@ -1,7 +1,9 @@
 <div class="notification-message-modal" *ngIf="showNotification" (click)="showNotification = false"></div>
 <div class="alert notification-message-container animated fadeInDown" *ngIf="showNotification" 
-    [ngClass]="{'alert-danger' : alertType == 'error', 
-                'alert-success' : alertType == 'success'}">
+    [ngClass]="{'alert-danger' : alertType == 'ERROR', 
+                'alert-success' : alertType == 'SUCCESS', 
+                'alert-warning' : alertType == 'WARNING', 
+                'alert-info' : alertType == 'INFO'}">
     <i class="fas fa-times-circle close-btn" (click)="showNotification = false;"></i>
     <div class="message">{{notificationMessage}}</div>
 </div>

@@ -33,7 +33,7 @@ export class AppComponent {
     
   displayError(err) {
     this.notificationMessageSubscriber = this.NotificationMessageService.changeMessage({
-      message : 'Could not fetch data', type : 'error'});
+      message : 'Could not fetch data. ' + err.message, type : 'ERROR'});
       console.log('error in getSampleData');
       console.log(err);    
   }
