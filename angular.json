@@ -23,8 +23,9 @@
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/animate.css/animate.min.css",
-              "src/styles.css",
-              "src/theme.scss"
+              "src/styles/styles.css",
+              "src/styles/spinner.css",
+              "src/styles/theme.scss"              
             ],
             "scripts": []
           },

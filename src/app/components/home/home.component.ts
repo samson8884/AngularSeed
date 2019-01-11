@@ -10,11 +10,15 @@ import {_} from "underscore";
 export class HomeComponent implements OnInit {
 
   username: string;
+  showSpinner: boolean;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    this.username = this.authService.getToken().split("@")[0];      
+    this.username = this.authService.getToken().split("@")[0];
+    
+    //setting this to true will show the loading/busy animation
+    this.showSpinner = false;
   }
 
 }

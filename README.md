@@ -1,7 +1,6 @@
 # AngularSeed App - the seed for Angular 6 web applications
 Angular skeleton application designed to quick start your webapp. Developers can concentrate on building business specific requirements and forget the overheads, thus considerably reducing time and efforts. It comes fully integrated with Angular, Express, Concurrently, Bootstrap, Font Awesome and some animations.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
 ## Running the app
 Note: We need angular cli version 6.2.1 to run this app. You can install angular cli globally using
@@ -43,6 +42,15 @@ This section explains how to use common components
 This service and corresponding component can be used to display messages in a modal. For example, you could use this to display error messages when a backend API call fails.
 Check the displayError() method in app.component.ts for details.
 Note: NotificationMessageComponent supports WARNING, INFO, SUCCESS and ERROR type messages.
+
+2) Spinner or Busy/Loading animation
+The app has a ready to use CSS based spinner. This can be used on any of your pages eg: when a REST API call is made and the UI is waiting for the backed to respond with data.
+Refer to home.component.html 
+`<div class="lds-ripple spinner" *ngIf="showSpinner"><div></div><div></div></div>`
+You need to include the spinner in the HTML file along with a condition indicating when this needs to be displayed
+
+Refer to home.component.ts
+You could set `showSpinner` to false when the component is initialized and true when you need to show the spinner.
 
 ## Further help
 
@@ -210,11 +218,11 @@ Note: If you are using a proxy for Express as described in the Express section a
 ## Font Awesome
 1. `npm install @fortawesome/fontawesome-free --save`
 
-2. add the reference to fontawesomein .angular-cli.json
+2. add the reference to fontawesomein angular.json
 ```
 "styles": [        
         "../node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-		"styles.css"
+		"styles/styles.css"
       ]
 ```
 
@@ -223,16 +231,16 @@ Note: If you are using a proxy for Express as described in the Express section a
 1. `npm install bootstrap@4.0.0 --save`
 this version worked with angular 5
 
-2. add the reference to bootstrap.css in .angular-cli.json
+2. add the reference to bootstrap.css in angular.json
 ```
 "styles": [        
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-		"styles.css"
+		"styles/styles.css"
       ]
 ```
 	  
-we could also import it in styles.css since this is already included in .angular-cli.json
+we could also import it in styles.css since this is already included in angular.json
 ```
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 ```
@@ -373,7 +381,7 @@ Note: If you find issues with ui router, the version of ui router may not be com
 
 
 ## Themes
-In order to customize the colours and look of the app, you can edit theme.scss. You could also replace this file with you own theme file. Remeber to add the theme css/scss file at the end of the styles in .angular-cli.json
+In order to customize the colours and look of the app, you can edit theme.scss. You could also replace this file with you own theme file. Remeber to add the theme css/scss file at the end of the styles in angular.json
 
 
 
