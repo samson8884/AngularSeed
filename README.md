@@ -38,12 +38,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## How to use
 This section explains how to use common components
 
-1) ##NotificationMessageService and NotificationMessageComponent
+## 1) NotificationMessageService and NotificationMessageComponent
 This service and corresponding component can be used to display messages in a modal. For example, you could use this to display error messages when a backend API call fails.
 Check the displayError() method in app.component.ts for details.
 Note: NotificationMessageComponent supports WARNING, INFO, SUCCESS and ERROR type messages.
 
-2) ##Spinner or Busy/Loading animation
+## 2) Spinner or Busy/Loading animation
 The app has a ready to use CSS based spinner. This can be used on any of your pages eg: when a REST API call is made and the UI is waiting for the backed to respond with data.
 Refer to home.component.html 
 `<div class="lds-ripple spinner" *ngIf="showSpinner"><div></div><div></div></div>`
@@ -52,7 +52,7 @@ You need to include the spinner in the HTML file along with a condition indicati
 Refer to home.component.ts
 You could set `showSpinner` to false when the component is initialized and true when you need to show the spinner.
 
-3) ##Web Storage
+## 3) Web Storage
 The WebStorageService can be used to save/retrieve data to/from web storage. Update the `sessionObj` defined in the `getSessionObject()` method and modify it according to your needs. The current example provided contains an `app` object which is used on the `Home Page`. It is advisable to design the `sessionObject` well and structure it logically (page wise according to the example provided). Refer to `home.componen.ts` on how to save data into session storage and how to retrieve it.
 
 ## Further help
