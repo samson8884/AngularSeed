@@ -36,10 +36,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## How to use
-This section explains how to use common components
+This section explains how to use common features
 
-## 1) NotificationMessageService and NotificationMessageComponent
-This service and corresponding component can be used to display messages in a modal. For example, you could use this to display error messages when a backend API call fails.
+## 1) Notifications
+NotificationMessageService and NotificationMessageComponent can be used to display messages in a modal. For example, you could use this to display error messages when a backend API call fails.
 Check the displayError() method in app.component.ts for details.
 Note: NotificationMessageComponent supports WARNING, INFO, SUCCESS and ERROR type messages.
 
