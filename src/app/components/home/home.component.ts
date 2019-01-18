@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
   username: string;
   showSpinner: boolean;
+  appObject: any;
 
   constructor(private authService: AuthService, private webStorageService: WebStorageService) { }
 
