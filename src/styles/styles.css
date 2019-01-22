@@ -11,7 +11,7 @@
 .panel-center {
     width: 50%;
     text-align: center;
-    margin: 100px auto; 
+    margin: 100px auto 0; 
     color: #888;      
 }
 
@@ -25,4 +25,10 @@
     -webkit-animation-delay: 6s;
     -moz-animation-delay: 6s;
     animation-delay: 6s;
+}
+
+.animated.delay-7s {
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    animation-delay: 7s;
 }

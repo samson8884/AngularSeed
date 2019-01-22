@@ -73,6 +73,13 @@ For your reference, all the steps executed to create this project have been docu
 
 4. index.html -> main.ts -> app.module.ts -> app.component.ts -> app.component.html
 
+## Adding GoJS
+1. `npm install --save gojs`
+
+2. Import GoJS in your component's .ts file.
+`import * as go from "gojs";`
+
+3. You can now proceed to add the GoJS related code. Refer to `home.component.ts` and `home.component.html` for sample code.
 
 
 ## Adding Express
