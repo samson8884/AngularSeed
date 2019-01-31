@@ -1,6 +1,8 @@
 # AngularSeed App - the seed for Angular 6 web applications
 Angular skeleton application designed to quick start your webapp. Developers can concentrate on building business specific requirements and forget the overheads, thus considerably reducing time and efforts. It comes fully integrated with Angular, Express, Concurrently, Bootstrap, Font Awesome and some animations.
 
+The app comes with a login page, landing page and about page. These pages are meant to be placeholders. They have been added so that login workflow and routing can be provided straight out of the box. They have corresponding Angular based components which can be used to provide a 3 page headstart into developing your own project. Developers are expected to modify these or add more as per business needs.
+
 
 ## Running the app
 Note: We need angular cli version 6.2.1 to run this app. You can install angular cli globally using
