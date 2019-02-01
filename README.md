@@ -21,22 +21,6 @@ or locally using
 
 5. Now you can start modifying the home page and about page according to your needs. These pages have been added as placeholders and you are free to modify/delete them.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ## How to use
 This section explains how to use common features
 
@@ -48,7 +32,9 @@ Note: NotificationMessageComponent supports WARNING, INFO, SUCCESS and ERROR typ
 ## 2) Spinner or Busy/Loading animation
 The app has a ready to use CSS based spinner. This can be used on any of your pages eg: when a REST API call is made and the UI is waiting for the backed to respond with data.
 Refer to home.component.html 
-`<div class="lds-ripple spinner" *ngIf="showSpinner"><div></div><div></div></div>`
+```
+<div class="lds-ripple spinner" *ngIf="showSpinner"><div></div><div></div></div>
+```
 You need to include the spinner in the HTML file along with a condition indicating when this needs to be displayed
 
 Refer to home.component.ts
@@ -57,9 +43,15 @@ You could set `showSpinner` to false when the component is initialized and true 
 ## 3) Web Storage
 The WebStorageService can be used to save/retrieve data to/from web storage. Update the `sessionObj` defined in the `getSessionObject()` method and modify it according to your needs. The current example provided contains an `app` object which is used on the `Home Page`. It is advisable to design the `sessionObject` well and structure it logically (page wise according to the example provided). Refer to `home.componen.ts` on how to save data into session storage and how to retrieve it.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 
 
