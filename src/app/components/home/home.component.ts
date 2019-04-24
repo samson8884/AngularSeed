@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
       
     this.webStorageService.setHomepageAppObject({
         tech : "Angular",
-        version : "6"
+        version : "7"
     });
       
     this.appObject = this.webStorageService.getHomepageAppObject();
