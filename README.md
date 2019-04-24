@@ -1,12 +1,12 @@
-# AngularSeed App - the seed for Angular 6 web applications
+# AngularSeed App - the seed for Angular 7 web applications
 Angular skeleton application designed to quick start your webapp. Developers can concentrate on building business specific requirements and forget the overheads, thus considerably reducing time and efforts. It comes fully integrated with Angular, Express, Concurrently, Bootstrap, Font Awesome and some animations.
 
 
 ## Running the app
-Note: We need angular cli version 6.2.1 to run this app. You can install angular cli globally using
-`npm install -g @angular/cli@6.2.1`
+Note: We need angular cli version 7.3.8 to run this app. You can install angular cli globally using
+`npm install -g @angular/cli@7.3.8`
 or locally using
-`npm install --save @angular/cli@6.2.1`
+`npm install --save @angular/cli@7.3.8`
 
 
 1. Run `npm install` to install all dependencies. This is a one time install.
@@ -147,8 +147,8 @@ import { Observable } from 'rxjs';
 
 3. in app.module.ts
 ```
-import { HttpClientModule } from 'ngx-http-client';
-Note: Do not import HttpClientModule from @angular/common/http if you need to pass special characters as query params
+import { HttpClientModule } from '@angular/common/http';
+Note: (for angular version 5) Do not import HttpClientModule from @angular/common/http if you need to pass special characters as query params instead import from ngx-http-client
 
 imports: [
     BrowserModule,
@@ -380,7 +380,7 @@ D:\SamplePrj\Angular\AngularSeedApp>ng generate component components\home
 7. access that app at http://localhost:3333/home. If useHash is true, the URL will be http://localhost:3333/#/home
 
 
-Note: If you find issues with ui router, the version of ui router may not be compatible with your angular version. For example "@uirouter/angular": "^2.0.0", did not work with "@angular/core": "^5.2.0". I had to downgrade to "@uirouter/angular": "^1.1.0"
+Note: If you find issues with ui router, the version of ui router may not be compatible with your angular version. For example "@uirouter/angular": "^2.0.0", did not work with "@angular/core": "^5.2.0". I had to downgrade to "@uirouter/angular": "^1.1.0" (this is for angular 5, we have now upgraded to angular 7 so this may not be applicable for the current code)
 
 
 ## Themes
