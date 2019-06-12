@@ -12,7 +12,7 @@ import { AuthService } from '../../authentication/auth.service';
 
   templateUrl: './login.component.html',
 
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 
 })
 

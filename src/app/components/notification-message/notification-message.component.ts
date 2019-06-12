@@ -4,7 +4,7 @@ import { NotificationMessageService } from '../../services/notification-message/
 @Component({
   selector: 'app-notification-message',
   templateUrl: './notification-message.component.html',
-  styleUrls: ['./notification-message.component.css']
+  styleUrls: ['./notification-message.component.scss']
 })
 export class NotificationMessageComponent implements OnInit {
 

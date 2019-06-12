@@ -25,7 +25,7 @@
               "node_modules/animate.css/animate.min.css",
               "src/styles/styles.css",
               "src/styles/spinner.css",
-              "src/styles/theme.scss"              
+              "src/styles/theme.scss"
             ],
             "scripts": []
           },
@@ -130,7 +130,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "css"
+      "styleext": "scss"
     },
     "@schematics/angular:directive": {
       "prefix": "app"
