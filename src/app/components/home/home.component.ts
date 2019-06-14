@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(private authService: AuthService, private webStorageService: WebStorageService) { }
 
   ngOnInit() {
-    this.username = this.authService.getToken().split("@")[0];
+    this.username = this.authService.getUsername();
     
     //setting this to true will show the loading/busy animation
     this.showSpinner = false;
