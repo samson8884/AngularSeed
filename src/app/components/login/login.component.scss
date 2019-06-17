@@ -1,3 +1,5 @@
+@import "../../../styles/mixins";
+
 .panel {
   h2 { 
     color:#444444; 
@@ -22,13 +24,18 @@
 }
 
 .login-form { 
-    text-align:center;    
+  text-align:center;    
 
-    .form-group {
-      margin-bottom:10px;
-    }
-
-    .btn {
-      height: 50px;
+  .form-group {
+    margin-bottom:10px;
   }
+
+  .btn {
+    height: 50px;
+  }
+
+  .form-control {
+    @include border-radius(0.25rem);
+  }
+
 }
