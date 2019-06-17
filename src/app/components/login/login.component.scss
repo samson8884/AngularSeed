@@ -1,6 +1,17 @@
-.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
+.panel {
+  h2 { 
+    color:#444444; 
+    font-size:18px; 
+    margin:0 0 8px 0;
+  }
 
-.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
+  p { 
+    color:#777777; 
+    font-size:14px; 
+    margin-bottom:30px; 
+    line-height:24px;
+  }
+}
 
 .main-div {
   background: #ffffff none repeat scroll 0 0;
@@ -10,14 +21,14 @@
   padding: 50px 70px 70px 71px;
 }
 
-.login-form .form-group {
-  margin-bottom:10px;
-}
+.login-form { 
+    text-align:center;    
 
-.login-form{ 
-    text-align:center;
-}
+    .form-group {
+      margin-bottom:10px;
+    }
 
-.login-form .btn {
-    height: 50px;
+    .btn {
+      height: 50px;
+  }
 }

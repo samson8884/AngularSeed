@@ -25,14 +25,16 @@
     color: #888;      
 }
 
-.animated.delay-1s {
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    animation-delay: 1s;
-}
+.animated {
+    .delay-1s {
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+        animation-delay: 1s;
+    }
 
-.animated.delay-6s {
-    -webkit-animation-delay: 6s;
-    -moz-animation-delay: 6s;
-    animation-delay: 6s;
+    .animated.delay-6s {
+        -webkit-animation-delay: 6s;
+        -moz-animation-delay: 6s;
+        animation-delay: 6s;
+    }
 }
