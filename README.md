@@ -395,9 +395,9 @@ Add a key @schematics/angular:component with the key styleext set to scss.
  
 The following examples are available
 1. Grouping with hierarchy - refer to login.component.scss
-2. Variables and Theming - refer to _variables.scss and style.css for highlight color
+2. Variables and Theming - refer to _variables.scss and styles.css for highlight color
 3. Mixin - refer to _mixin.scss and login.component.scss for the border-radius mixin
-4. Importing file - variables and mixins can be imported into scss files which need to use them. Refer to syles.scss and login.component.scss
+4. Importing file - variables and mixins can be imported into scss files which need to use them. Refer to styles.scss and login.component.scss
 
 
 
