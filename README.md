@@ -38,7 +38,7 @@ Refer to home.component.html
 You need to include the spinner in the HTML file along with a condition indicating when this needs to be displayed
 
 Refer to home.component.ts
-You could set `showSpinner` to false when the component is initialized and true when you need to show the spinner.
+You could import SpinnerService and set `showSpinner` to false when the component is initialized and true when you need to show the spinner.
 
 ## 3) Web Storage
 The WebStorageService can be used to save/retrieve data to/from web storage. Update the `sessionObj` defined in the `getSessionObject()` method and modify it according to your needs. The current example provided contains an `app` object which is used on the `Home Page`. It is advisable to design the `sessionObject` well and structure it logically (page wise according to the example provided). Refer to `home.componen.ts` on how to save data into session storage and how to retrieve it.
