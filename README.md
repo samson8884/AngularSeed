@@ -381,6 +381,25 @@ Note: If you find issues with ui router, the version of ui router may not be com
 In order to customize the colours and look of the app, you can edit theme.scss. You could also replace this file with you own theme file. Remeber to add the theme css/scss file at the end of the styles in angular.json
 
 
+## SCSS support
+SCSS makes styling easier to write, understand and maintain. We need to update angular.json and configure it to use SCSS.
+Add a key @schematics/angular:component with the key styleext set to scss.
+```
+"schematics": {
+  "@schematics/angular:component": {
+    "prefix": "app",
+    "styleext": "scss"
+  }
+ }
+ ```
+ 
+The following examples are available
+1. Grouping with hierarchy - refer to login.component.scss
+2. Variables and Theming - refer to _variables.scss and styles.css for highlight color
+3. Mixin - refer to _mixin.scss and login.component.scss for the border-radius mixin
+4. Importing file - variables and mixins can be imported into scss files which need to use them. Refer to styles.scss and login.component.scss
+
+
 
 ## useful npm commands
 ```
