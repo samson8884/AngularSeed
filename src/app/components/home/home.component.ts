@@ -12,7 +12,7 @@ import {_} from "underscore";
 export class HomeComponent implements OnInit {
 
   username: string;
-  showSpinner: true;
+  showSpinner: any;
   appObject: any;
 
   constructor(private authService: AuthService, private webStorageService: WebStorageService, private spinnerService: SpinnerService) { }
