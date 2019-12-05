@@ -31,14 +31,23 @@ Note: NotificationMessageComponent supports WARNING, INFO, SUCCESS and ERROR typ
 
 ## 2) Spinner or Busy/Loading animation
 The app has a ready to use CSS based spinner. This can be used on any of your pages eg: when a REST API call is made and the UI is waiting for the backed to respond with data.
+
+There are 2 types of spinners
+
+1) In line spinner
+This can be used on a particular section on a page
+
 Refer to home.component.html 
 ```
-<div class="lds-ripple spinner" *ngIf="showSpinner"><div></div><div></div></div>
+<div class="lds-blocks" *ngIf="showSpinner"><div></div><div></div></div>
 ```
-You need to include the spinner in the HTML file along with a condition indicating when this needs to be displayed
+You need to include the spinner in the HTML file along with a condition indicating when this needs to be displayed. Set this.showSpinner = true when you need to show the in line spinner.
+
+2) Modal spinner
+This can be used to show a spinner which blurs out the entire page so the user does not click on any items when the page is loading.
 
 Refer to home.component.ts
-You could import SpinnerService and set `showSpinner` to false when the component is initialized and true when you need to show the spinner.
+You could import SpinnerService and set `showSpinner` to false when the component is initialized and true when you need to show the modal spinner.
 
 ## 3) Web Storage
 The WebStorageService can be used to save/retrieve data to/from web storage. Update the `sessionObj` defined in the `getSessionObject()` method and modify it according to your needs. The current example provided contains an `app` object which is used on the `Home Page`. It is advisable to design the `sessionObject` well and structure it logically (page wise according to the example provided). Refer to `home.componen.ts` on how to save data into session storage and how to retrieve it.

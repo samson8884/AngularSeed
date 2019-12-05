@@ -12,15 +12,16 @@ import {_} from "underscore";
 export class HomeComponent implements OnInit {
 
   username: string;
-  showSpinner: boolean;
+  showSpinner: true;
   appObject: any;
 
   constructor(private authService: AuthService, private webStorageService: WebStorageService, private spinnerService: SpinnerService) { }
 
   ngOnInit() {
     this.username = this.authService.getUsername();
-    
-    //setting this to true will show the loading/busy animation
+    this.showSpinner = false; //hide inline spinner
+      
+    //setting this to true will show the loading/busy animation ie modal spinner
     this.spinnerService.changeMessage({
       showSpinner: false
     });
