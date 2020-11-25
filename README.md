@@ -10,6 +10,9 @@ Note: We need angular cli version 7.3.8 to run this app. You can install angular
 or locally using
 `npm install --save @angular/cli@7.3.8`
 
+also install windows build tools using
+`npm install -g windows-build-tools`
+
 
 1. Run `npm install` to install all dependencies. This is a one time install.
 
