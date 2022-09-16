@@ -29,7 +29,7 @@
     "acorn": "^6.1.1",
     "animate.css": "^3.7.0",
     "body-parser": "^1.18.3",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.3.1",
     "concurrently": "^3.6.0",
     "core-js": "^2.4.1",
     "express": "^4.16.3",
